@@ -5,7 +5,7 @@ class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
-  ## How to build a community site
+  ## How to build a meetup site
   with Astro, Github actions, Octocat and Cloudflare workers
 
   Learn more at [PlanBee-dev](https://github.com/PlanBee-dev/oulu-dev-meetups)
@@ -16,7 +16,7 @@ title: Welcome to Slidev
 mdc: true
 ---
 
-# How to build a community site
+# How to build a meetup site
 
 With Astro, Github actions, Octocat and Cloudflare workers
 
@@ -34,22 +34,14 @@ The last comment block of each slide will be treated as slide notes. It will be 
 transition: fade-out
 ---
 
-# What is Slidev?
+# Why this stack?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+We wanted to create a simple yet powerful site to organize our local developer meetups. Here are some reasons we chose Astro, Github Actions, Octocat and Cloudflare Workers:
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+- 📝 **Static site** - Not much funcitonality should be needed
+- 🎨 **Open source** - Anyone can add a meetup by creating a PR
+- 🧑‍💻 **Still, some functionality** - Anyone can create a PR for meetup via form in site
 
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -69,70 +61,47 @@ h1 {
 </style>
 
 <!--
-Here is another comment.
+introduction to topic
 -->
 
 ---
 layout: default
 ---
 
-# Table of contents
+# So what 's the stack then?
 
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-<Toc maxDepth="1"></Toc>
+- Astro - For static site generation
+- pnpm - For package management
+- Github Actions - For continuous integration and deployment
+- Github pages - For hosting the site
+- Octocat - for managing meetups in Markdown format
+- Cloudflare Workers - For simple contact form functionality
+- Vitest - For testing
 
 ---
 transition: slide-up
 level: 2
 ---
 
-# Navigation
+# Astro
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
 
-### Keyboard Shortcuts
+For building blazingly fast content sites [Astro](https://astro.build/)
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+Generates static html from markdown, like for example Gatsby or Next.js. 
+However Astro is much simpler and lighter.
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
-# Code
+# pnpm
 
-Use code snippets and get the highlighting directly![^1]
+Supports monorepos out of the box and is fast. pnpm uses hard links instead of copying dependencies which makes installs very fast.
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
 
 <arrow v-click="[3, 4]" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
 
@@ -152,7 +121,7 @@ function updateUser(id: number, update: User) {
 
 ---
 
-# Components
+# Github actions
 
 <div grid="~ cols-2 gap-4">
 <div>
@@ -197,7 +166,7 @@ Also, HTML elements are valid:
 class: px-20
 ---
 
-# Themes
+# Github pages
 
 Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
 
@@ -228,7 +197,7 @@ check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 preload: false
 ---
 
-# Animations
+# Cloudflare workers
 
 Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
 
@@ -302,7 +271,7 @@ const final = {
 
 ---
 
-# LaTeX
+# Octocat
 
 LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
 
@@ -330,7 +299,7 @@ $$
 
 ---
 
-# Diagrams
+# Vitest
 
 You can create diagrams / graphs from textual descriptions, directly in your Markdown.
 
@@ -407,16 +376,6 @@ database "MySql" {
 </div>
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-src: ./pages/multiple-entries.md
-hide: false
----
-
----
-layout: center
-class: text-center
----
 
 # Learn More
 
