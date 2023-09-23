@@ -6,7 +6,7 @@ highlighter: shiki
 lineNumbers: false
 info: |
   ## How to build a meetup site
-  with Astro, Github actions, Octocat and Cloudflare workers
+  with Astro, Github actions, Octokit and Cloudflare workers
 
   Learn more at [PlanBee-dev](https://github.com/PlanBee-dev/oulu-dev-meetups)
 drawings:
@@ -18,7 +18,7 @@ mdc: true
 
 # How to build a meetup site
 
-With Astro, Github actions, Octocat and Cloudflare workers
+With Astro, Github actions, Octokit and Cloudflare workers
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -34,9 +34,9 @@ The last comment block of each slide will be treated as slide notes. It will be 
 transition: fade-out
 ---
 
-# Why this stack?
+# What was built?
 
-We wanted to create a simple yet powerful site to organize our local developer meetups. Here are some reasons we chose Astro, Github Actions, Octocat and Cloudflare Workers:
+We wanted to create a simple yet powerful site to organize local developer meetups in our town. Here are some reasons we chose Astro, Github Actions, Octokit and Cloudflare Workers:
 
 - 📝 **Static site** - Not much funcitonality should be needed
 - 🎨 **Open source** - Anyone can add a meetup by creating a PR
@@ -68,13 +68,13 @@ introduction to topic
 layout: default
 ---
 
-# So what 's the stack then?
+# So what 's the whole stack then?
 
 - Astro - For static site generation
 - pnpm - For package management
 - Github Actions - For continuous integration and deployment
 - Github pages - For hosting the site
-- Octocat - for managing meetups in Markdown format
+- Octokit - for managing meetups in Markdown format
 - Cloudflare Workers - For simple contact form functionality
 - Vitest - For testing
 
@@ -271,7 +271,7 @@ const final = {
 
 ---
 
-# Octocat
+# Octokit
 
 LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
 
