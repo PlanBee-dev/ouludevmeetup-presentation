@@ -273,29 +273,9 @@ const final = {
 
 # Octokit
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+Github's official library for managing GitHub interactions like repositories, issues, pull requests etc. It allows managing meetups in Markdown format stored in GitHub repositories.
 
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
+[Octokit](https://github.com/octokit/octokit.js)
 
 ---
 
