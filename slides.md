@@ -18,7 +18,7 @@ mdc: true
 
 # How to build a meetup site
 
-With Astro, Github pages, Github actions, Octokit and Cloudflare workers
+With Astro, Tailwind, Github pages, Github actions, Octokit and Cloudflare workers
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -41,6 +41,10 @@ We wanted to create a simple yet powerful site to organize local developer meetu
 - 📝 **Static site** - Not much funcitonality should be needed
 - 🎨 **Open source** - Anyone can add a meetup by creating a PR
 - 🧑‍💻 **Still, some functionality** - Anyone can create a PR for meetup via form in site
+
+<div class="pt-8 px-12">
+  <img border="rounded" width="500"  src="/images/oulu-devmeetups-hero.jpg">
+</div>
 
 
 <!--
