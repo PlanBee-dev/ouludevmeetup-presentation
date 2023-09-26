@@ -219,6 +219,6 @@ url: https://ouludevmeetup.com/
 
 Site is already live 
 
-Link: [Oulu Dev Meetup](https://ouludevmeetup.com)
+Link: [ouludevmeetup.com](https://ouludevmeetup.com)
 
 Repository: [GitHub](https://github.com/PlanBee-dev/oulu-dev-meetups) 
