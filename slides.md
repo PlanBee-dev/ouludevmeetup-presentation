@@ -75,7 +75,7 @@ layout: default
 # So what 's the whole stack then?
 
 - Astro - For static site generation
-- Tailwind for easy styling
+- Tailwind - for easy styling
 - pnpm - For package management
 - Github Actions - For continuous integration and deployment
 - Github pages - For hosting the site
