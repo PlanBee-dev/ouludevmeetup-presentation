@@ -39,7 +39,7 @@ transition: fade-out
 We wanted to create a simple yet powerful site to organize local developer meetups in our town. Here are some reasons we chose Astro, Github Actions, Octokit and Cloudflare Workers:
 
 - 📝 **Static site** - Not much funcitonality should be needed
-- 🎨 **Open source** - Anyone can add a meetup by creating a PR
+- 🎨 **Open source** - Anyone can add a meetup by creating a PR in github
 - 🧑‍💻 **Still, some functionality** - Anyone can create a PR for meetup via form in site
 
 <div class="pt-8 px-12">
@@ -75,6 +75,7 @@ layout: default
 # So what 's the whole stack then?
 
 - Astro - For static site generation
+- Tailwind for easy styling
 - pnpm - For package management
 - Github Actions - For continuous integration and deployment
 - Github pages - For hosting the site
@@ -85,23 +86,28 @@ layout: default
 ---
 transition: slide-up
 level: 2
+layout: iframe-right
+url: https://astro.build/
 ---
 
 # Astro
 
 
-For building blazingly fast content sites [Astro](https://astro.build/)
+For building blazingly fast content sites.
 
-Generates static html from markdown, like for example Gatsby or Next.js. 
+Generates static html from content like markdown, same way for example like Gatsby or Next.js. 
 However Astro is much simpler and lighter.
 
+Can be used with any framework like React or Vue but also works without any framework for simple sites. Like this one we made. 
 
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+layout: iframe-right
+url: https://pnpm.io/
 ---
 
 # pnpm
+
+Package manager
 
 Supports monorepos out of the box and is fast. pnpm uses hard links instead of copying dependencies which makes installs very fast.
 
