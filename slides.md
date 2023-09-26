@@ -36,11 +36,11 @@ transition: fade-out
 
 # What was built?
 
-We wanted to create a simple yet powerful site to organize local developer meetups in our town. Here are some reasons we chose Astro, Github Actions, Octokit and Cloudflare Workers:
+We wanted to create a simple and easy to use site to organize local developer meetups in our town. So requirements were quite simple. 
 
-- 📝 **Static site** - Not much funcitonality should be needed
+- 📝 **(Mostly) static site** - Not much funcitonality should be needed
 - 🎨 **Open source** - Anyone can add a meetup by creating a PR in github
-- 🧑‍💻 **Still, some functionality** - Anyone can create a PR for meetup via form in site
+- 🧑‍💻 **Yes, some functionality** - Anyone can create a PR for meetup via form in site
 
 <div class="pt-8 px-12">
   <img border="rounded" width="500"  src="/images/oulu-devmeetups-hero.jpg">
@@ -112,11 +112,6 @@ Package manager
 Supports monorepos out of the box and is fast. pnpm uses hard links instead of copying dependencies which makes installs very fast.
 
 
-
-<arrow v-click="[3, 4]" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
 <style>
 .footnotes-sep {
   @apply mt-20 opacity-10;
@@ -130,175 +125,97 @@ Supports monorepos out of the box and is fast. pnpm uses hard links instead of c
 </style>
 
 ---
+transition: slide-up
+layout: iframe-right
+url: https://tailwindcss.com/
+---
 
-# Github actions
+# Tailwind
 
-<div grid="~ cols-2 gap-4">
-<div>
 
-You can use Vue components directly inside your slides.
+For fast styling for wooden eyed developers like me.
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+Use utility classes for styles.
 
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
+We used also premade components for common things like cards, navbars etc.
 
 ---
-class: px-20
+layout: iframe-right
+url: https://pages.github.com/
 ---
 
 # Github pages
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+For hosting static sites for free.
 
-<div grid="~ cols-2 gap-2" m="-t-2">
+Simply the easiest way. 
 
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+We deploy the built site to the `gh-pages` branch which github hosts for us at https://planbee-dev.github.io/oulu-dev-meetups
 
 ---
-preload: false
+layout: iframe-right
+url: https://github.com/features/actions
+---
+
+# Github actions
+
+Automating workflows
+
+Used for automating issue and PR creation and deployment workflows.
+
+---
+layout: iframe-right
+url: https://workers.cloudflare.com/
 ---
 
 # Cloudflare workers
 
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
+For backend
 
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
+We used workers to connect our form to github issue creating. The form submits to a worker which then creates an issue in github using Octokit API.
 
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
 
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
+---
+layout: iframe-right
+url: https://github.com/octokit/octokit.js
 ---
 
 # Octokit
 
-Github's official library for managing GitHub interactions like repositories, issues, pull requests etc. It allows managing meetups in Markdown format stored in GitHub repositories.
+Github's official library for managing GitHub interactions like repositories, issues, pull requests etc. 
 
-[Octokit](https://github.com/octokit/octokit.js)
+Used to create issues for meetups in markdown format to GitHub repository.
 
+```
+    const createIssueRes = await octokit.rest.issues.create({
+      owner: props.env.GITHUB_REPO_OWNER,
+      repo: props.env.GITHUB_REPO_NAME,
+      labels: ['meetup'],
+      title: props.meetup.title,
+      body: getMeetupIssueBody(props.meetup),
+    }); 
+```
+
+---
+layout: iframe-right
+url: https://vitest.dev/
 ---
 
 # Vitest
 
 Testing library which recently got it's 10000th star on GitHub!
 
+We use only blazingly fast stuff, you know it!
+
 
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 ---
-# Learn More
+layout: iframe-right
+url: https://ouludevmeetup.com/
+---
+# Thank you
 
 Site is already live 
 
