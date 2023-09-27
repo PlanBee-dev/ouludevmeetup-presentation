@@ -43,7 +43,7 @@ We wanted to create a simple and easy to use site to organize local developer me
 - 🧑‍💻 **Yes, some functionality** - Anyone can create a PR for meetup via form in site
 
 <div class="pt-8 px-12">
-  <img border="rounded" width="500"  src="/images/oulu-devmeetups-hero.jpg">
+  <img border="rounded" width="500"  src="/public/oulu-devmeetups-hero.jpg">
 </div>
 
 
@@ -154,7 +154,7 @@ We deploy the built site to the `gh-pages` branch which github hosts for us at h
 
 ---
 layout: image-right
-image: /images/gh_actions_screen.png
+image: /public/gh_actions_screen.png
 ---
 
 # Github actions
@@ -179,7 +179,7 @@ We used workers to connect our form to github issue creating. The form submits t
 
 ---
 layout: image-right
-image: /images/octokit_screen.png
+image: /public/octokit_screen.png
 ---
 
 # Octokit
@@ -202,7 +202,7 @@ Used to create issues for meetups in markdown format to GitHub repository.
 
 ---
 layout: image-right
-image: /images/vitest_screen.png
+image: /public/vitest_screen.png
 ---
 
 # Vitest
