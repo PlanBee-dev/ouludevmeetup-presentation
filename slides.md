@@ -154,7 +154,7 @@ We deploy the built site to the `gh-pages` branch which github hosts for us at h
 
 ---
 layout: image-right
-image: /gh_actions_screen.png
+image: ./gh_actions_screen.png
 ---
 
 # Github actions
@@ -179,7 +179,7 @@ We used workers to connect our form to github issue creating. The form submits t
 
 ---
 layout: image-right
-image: /octokit_screen.png
+image: ./octokit_screen.png
 ---
 
 # Octokit
@@ -202,7 +202,7 @@ Used to create issues for meetups in markdown format to GitHub repository.
 
 ---
 layout: image-right
-image: /vitest_screen.png
+image: ./vitest_screen.png
 ---
 
 # Vitest
