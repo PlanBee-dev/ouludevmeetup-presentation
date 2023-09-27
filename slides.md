@@ -153,8 +153,8 @@ Simply the easiest way.
 We deploy the built site to the `gh-pages` branch which github hosts for us at https://planbee-dev.github.io/oulu-dev-meetups
 
 ---
-layout: iframe-right
-url: https://github.com/features/actions
+layout: image-right
+image: /images/gh_actions_screen.png
 ---
 
 # Github actions
@@ -162,6 +162,8 @@ url: https://github.com/features/actions
 Automating workflows
 
 Used for automating issue and PR creation and deployment workflows.
+
+[Github actions](https://github.com/features/actions)
 
 ---
 layout: iframe-right
@@ -176,8 +178,8 @@ We used workers to connect our form to github issue creating. The form submits t
 
 
 ---
-layout: iframe-right
-url: https://github.com/octokit/octokit.js
+layout: image-right
+image: /images/octokit_screen.png
 ---
 
 # Octokit
@@ -196,9 +198,11 @@ Used to create issues for meetups in markdown format to GitHub repository.
     }); 
 ```
 
+[Octokit](https://github.com/octokit/octokit.js)
+
 ---
-layout: iframe-right
-url: https://vitest.dev/
+layout: image-right
+image: /images/vitest_screen.png
 ---
 
 # Vitest
@@ -209,7 +213,7 @@ We use only blazingly fast stuff, you know it!
 
 
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+[vitest.dev/](https://vitest.dev/)
 
 ---
 layout: iframe-right
