@@ -78,10 +78,11 @@ layout: default
 - Tailwind - for easy styling
 - pnpm - For package management
 - Github Actions - For continuous integration and deployment
-- Github pages - For hosting the site
+- Github Pages - For hosting the site
 - Octokit - for managing meetups in Markdown format
 - Cloudflare Workers - For simple contact form functionality
-- Vitest - For testing
+- Vitest - For unit testing
+- Playwright - For end to end testing
 
 ---
 transition: slide-up
@@ -150,7 +151,7 @@ layout: iframe-right
 url: https://pages.github.com/
 ---
 
-# Github pages
+# Github Pages
 
 For hosting static sites for free.
 
@@ -163,7 +164,7 @@ layout: image-right
 image: ./gh_actions_screen.png
 ---
 
-# Github actions
+# Github Actions
 
 Automating workflows
 
@@ -180,7 +181,7 @@ layout: iframe-right
 url: https://workers.cloudflare.com/
 ---
 
-# Cloudflare workers
+# Cloudflare Workers
 
 For backend
 
@@ -202,14 +203,14 @@ Github's official library for managing GitHub interactions like repositories, is
 
 Used to create issues for meetups in markdown format to GitHub repository.
 
-```
-    const createIssueRes = await octokit.rest.issues.create({
-      owner: props.env.GITHUB_REPO_OWNER,
-      repo: props.env.GITHUB_REPO_NAME,
-      labels: ['meetup'],
-      title: props.meetup.title,
-      body: getMeetupIssueBody(props.meetup),
-    }); 
+```ts
+const createIssueRes = await octokit.rest.issues.create({
+  owner: props.env.GITHUB_REPO_OWNER,
+  repo: props.env.GITHUB_REPO_NAME,
+  labels: ['meetup'],
+  title: props.meetup.title,
+  body: getMeetupIssueBody(props.meetup),
+}); 
 ```
 
 [Octokit](https://github.com/octokit/octokit.js)
@@ -228,14 +229,54 @@ Vitest is extremely fast compared to other frameworks like Jest or Mocha. It lau
 
 Vitest tests can run in node, browsers and other environments. This flexibility allows testing universal codebases.
 
+```ts
+test('get next meetup from today', () => {
+  const meetups = [
+    { title: 'Vue Meetup', date: new Date(2023, 8, 3, 10, 0) },
+    { title: 'Angular Meetup', date: new Date(2023, 8, 4, 10, 0) },
+    { title: 'React Meetup', date: new Date(2023, 8, 5, 10, 0) },
+  ];
 
+  vi.setSystemTime(new Date(2023, 8, 4, 10, 0));
+  expect(getNextMeetup(meetups).title).toBe('React Meetup');
+});
+```
 
 [vitest.dev/](https://vitest.dev/)
 
 ---
 layout: iframe-right
+url: https://playwright.dev/
+---
+
+# Playwright
+
+Browser testing tool for integration and end-to-end testing.
+
+Used to test Astro's production build by starting a local server and asserting elements on the page.
+
+Supported by `@testing-library` ecosystem for accessibility focused DOM assertions.
+
+```ts
+test('main heading is set', async () => {
+  const page = await browser.newPage();
+
+  await page.goto('http://localhost:4321/');
+
+  await page.getByRole('heading', {
+    level: 1,
+    name: 'Developer meetups in Oulu area'
+  });
+});
+```
+
+[https://playwright.dev/](https://playwright.dev/)
+
+---
+layout: iframe-right
 url: https://ouludevmeetup.com/
 ---
+
 # Thank you
 
 Site is already live 
