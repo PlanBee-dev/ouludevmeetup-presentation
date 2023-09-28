@@ -216,10 +216,13 @@ image: ./vitest_screen.png
 ---
 
 # Vitest
+We use only blazingly fast stuff, you know it!
 
 Testing library which recently got it's 10000th star on GitHub!
 
-We use only blazingly fast stuff, you know it!
+Vitest is extremely fast compared to other frameworks like Jest or Mocha. It launches tests in parallel to optimize performance
+
+Vitest tests can run in node, browsers and other environments. This flexibility allows testing universal codebases.
 
 
 
