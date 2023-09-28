@@ -186,6 +186,10 @@ For backend
 
 We used workers to connect our form to github issue creating. The form submits to a worker which then creates an issue in github using Octokit API.
 
+Serverless - Workers run without any servers to manage or provision. Code is deployed to Cloudflare's global edge network. Unlike Aws Lambdas, code for workers does not need to be deployed as zipped file. 
+
+Generous free tier and pay-as-you-go pricing make Workers affordable.
+
 
 ---
 layout: image-right
