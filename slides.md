@@ -111,6 +111,10 @@ Package manager
 
 Supports monorepos out of the box and is fast. pnpm uses hard links instead of copying dependencies which makes installs very fast.
 
+Compatible with npm and Yarn workflows. It can be dropped into existing projects seamlessly.
+
+Caches all packages globally on disk rather than locally inside each project. 
+
 
 <style>
 .footnotes-sep {
@@ -133,7 +137,7 @@ url: https://tailwindcss.com/
 # Tailwind
 
 
-For fast styling for wooden eyed developers like me.
+For fast styling for wooden eyed developers.
 
 Use utility classes for styles.
 
