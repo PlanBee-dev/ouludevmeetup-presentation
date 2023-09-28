@@ -169,6 +169,10 @@ Automating workflows
 
 Used for automating issue and PR creation and deployment workflows.
 
+Workflows are defined in YAML files and run on GitHub hosted runners.
+
+Workflows can be triggered by various events like pushes, pull requests, releases, issues, etc.
+
 [Github actions](https://github.com/features/actions)
 
 ---
