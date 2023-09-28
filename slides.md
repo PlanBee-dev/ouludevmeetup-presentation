@@ -137,11 +137,13 @@ url: https://tailwindcss.com/
 # Tailwind
 
 
-For fast styling for wooden eyed developers.
+Fast styling for lazy and wooden eyed developers.
 
 Use utility classes for styles.
 
 We used also premade components for common things like cards, navbars etc.
+
+Does tree shaking to only include what is used in the final CSS output.
 
 ---
 layout: iframe-right
