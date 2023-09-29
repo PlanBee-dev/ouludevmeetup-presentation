@@ -79,8 +79,8 @@ layout: default
 - pnpm - For package management
 - Github Actions - For continuous integration and deployment
 - Github Pages - For hosting the site
-- Octokit - for managing meetups in Markdown format
-- Cloudflare Workers - For simple contact form functionality
+- Cloudflare Workers - serverless backend for meetup submission form
+- Octokit - Github API wrapper library for posting meetup data
 - Vitest - For unit testing
 - Playwright - For end to end testing
 
